@@ -1,7 +1,9 @@
 const lpiHeader = require('../models/tblLPIHeader')
 
 exports.getLPIHeader = (req, res, next) =>{
-  lpiHeader.findAll()
+  lpiHeader.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

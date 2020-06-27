@@ -1,7 +1,9 @@
 const gapHeader = require('../models/tblGapHeader')
 
 exports.getGapHeader = (req, res, next) =>{
-  gapHeader.findAll()
+  gapHeader.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

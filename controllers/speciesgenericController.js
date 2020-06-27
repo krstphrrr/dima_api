@@ -1,7 +1,9 @@
 const SpecGen = require('../models/tblSpeciesGeneric')
 
 exports.getSpecGen = (req, res, next) =>{
-  SpecGen.findAll()
+  SpecGen.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

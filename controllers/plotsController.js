@@ -1,7 +1,9 @@
 const Plots = require('../models/tblPlots')
 
 exports.getPlots = (req, res, next) =>{
-  Plots.findAll()
+  Plots.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

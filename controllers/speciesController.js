@@ -1,7 +1,9 @@
 const Species = require('../models/tblSpecies')
 
 exports.getSpecies = (req, res, next) =>{
-  Species.findAll()
+  Species.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

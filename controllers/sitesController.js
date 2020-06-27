@@ -1,7 +1,9 @@
 const Sites = require('../models/tblSites')
 
 exports.getSites = (req, res, next) =>{
-  Sites.findAll()
+  Sites.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

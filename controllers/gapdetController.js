@@ -1,7 +1,9 @@
 const gapDet = require('../models/tblGapDetail')
 
 exports.getGapDet = (req, res, next) =>{
-  gapDet.findAll()
+  gapDet.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })

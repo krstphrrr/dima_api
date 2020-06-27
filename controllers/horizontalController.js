@@ -1,7 +1,9 @@
 const horFlux = require('../models/tblHorizontalFlux')
 
 exports.getHorFlux = (req, res, next) =>{
-  horFlux.findAll()
+  horFlux.findAll({
+    where:req.query
+  })
   .then( r => {
     res.status(200).json(r)
   })
