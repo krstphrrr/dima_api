@@ -1,6 +1,33 @@
 const Sequelize = require('sequelize')
-
 const db = require("../config/database")
+
+/**
+ * @swagger 
+ * definitions:
+ * 	GapDetail:
+ * 		type:object
+ * 		properties:
+ * 			RecKey:
+ * 				type: string
+ * 			SeqNo:
+ * 				type: integer
+ * 			RecType:
+ * 				type: string
+ * 			GapStart:
+ * 				type: string
+ * 			GapEnd:
+ * 				type: string
+ * 			Gap:
+ * 				type: string
+ * 			PrimaryKey:
+ * 				type: string
+ * 			DateLoadedInDB:
+ * 				type: string
+ * 				format:date-time
+ * 			DBKey:
+ * 				type: string
+ * 
+ */
 
 const gapdetail = db.define('tblGapDetail', {
 		RecKey: {
@@ -29,7 +56,8 @@ const gapdetail = db.define('tblGapDetail', {
 		},
 		PrimaryKey: {
 			type: Sequelize.TEXT,
-			allowNull: true
+			allowNull: true,
+			primaryKey:true
 		},
 		DateLoadedInDB: {
 			type: Sequelize.TEXT,

@@ -1,5 +1,6 @@
 const gapDet = require('../models/tblGapDetail')
 
+
 exports.getGapDet = (req, res, next) =>{
   gapDet.findAll({
     where:req.query
