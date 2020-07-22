@@ -2,7 +2,8 @@ const SpecGen = require('../models/tblSpeciesGeneric')
 
 exports.getSpecGen = (req, res, next) =>{
   SpecGen.findAll({
-    where:req.query
+    where:req.query,
+
   })
   .then( r => {
     res.status(200).json(r)
@@ -13,7 +14,8 @@ exports.getSpecGen = (req, res, next) =>{
 exports.getSpecGenPARAM = (req, res, next) =>{
   let whichPARAM = req.query
   SpecGen.findAll({
-    where: whichPARAM
+    where: whichPARAM,
+    limit:1
   })
   .then( r => {
     res.status(200).json(r)

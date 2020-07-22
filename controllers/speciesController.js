@@ -2,7 +2,8 @@ const Species = require('../models/tblSpecies')
 
 exports.getSpecies = (req, res, next) =>{
   Species.findAll({
-    where:req.query
+    where:req.query,
+
   })
   .then( r => {
     res.status(200).json(r)
@@ -13,7 +14,8 @@ exports.getSpecies = (req, res, next) =>{
 exports.getSpeciesParam = (req, res, next) =>{
   let whichPARAM = req.query
   Species.findAll({
-    where: whichPARAM
+    where: whichPARAM,
+    limit:1
   })
   .then( r => {
     res.status(200).json(r)

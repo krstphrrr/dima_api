@@ -1,0 +1,22 @@
+html
+    head
+        title= 'Output'
+        script
+         include axios.min.js
+         include axios.min.map
+    body
+    div
+      //- form(action='/api' method="get")
+        //- label(for='')
+      select(class="testclass", id="testid", onchange='getOption()')
+        each i in data
+          option(value=i selected=i) #{i}
+          //- input(type='submit', value='Submit')
+    br
+    div
+      //- span(class='output')
+      table
+        tr
+          th(class='output2')
+    script
+      include functions.js

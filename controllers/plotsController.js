@@ -2,7 +2,8 @@ const Plots = require('../models/tblPlots')
 
 exports.getPlots = (req, res, next) =>{
   Plots.findAll({
-    where:req.query
+    where:req.query,
+
   })
   .then( r => {
     res.status(200).json(r)
@@ -13,7 +14,8 @@ exports.getPlots = (req, res, next) =>{
 exports.getPlotsPK= (req, res, next) =>{
   let whichPK = req.query
   Plots.findAll({
-    where: whichPK
+    where: whichPK,
+    limit:1
   })
   .then( r => {
     res.status(200).json(r)

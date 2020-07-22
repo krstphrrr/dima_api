@@ -1,17 +1,25 @@
 if(process.env.NODE_ENV!=='production'){
   require('dotenv').config()
 }
-
+const { QueryTypes } = require('sequelize');
 const express = require('express')
 const app = express()
 const db = require('./config/database')
+const cors = require('cors')
+const helmet = require('helmet')
 const swaggerJsDoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
-// const cors = require('cors')
+const path = require('path')
 
-//route 
-const dimaRoute = require('./routes/dimaTableGet')
+//route
+const dimaRoute = require('./routes/dimaTableGet');
+// const { reset } = require('nodemon');
+const bodyparser = require('body-parser');
 
+app.use(bodyparser.urlencoded({ extended: true }));
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view-engine', 'pug')
 
 
 const swaggerOptions = {
@@ -38,17 +46,9 @@ var swaggerUiOpts = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, swaggerUiOpts))
 
+app.use(helmet())
+app.use(cors())
 
-app.use((req, res, next)=>{
-  res.setHeader('Access-Control-Allow-Origin','http://localhost:4200','https://landscapedatacommons.org', 'https://test.landscapedatacommons.org')
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, PATCH')
-  res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization')
-  res.setHeader('Access-Control-Allow-Credentials', true)
-  res.setHeader('set-cookie',[
-    'same-site-cookie=bar; SameSite=None; Secure'
-  ])
-  next()
-})
 
 
 db.authenticate()
@@ -56,9 +56,28 @@ db.authenticate()
     .catch(err => console.log('error:'+ err));
 
 
-app.get('/', (req, res) => 
+app.get('/', (req, res) => {
   res.send('dima api up')
-)
+  })
+
+app.get('/tables', (req, res)=>{
+  db.query("select * from pg_catalog.pg_tables where schemaname != 'pg_catalog' and schemaname != 'information_schema';",{
+  
+    logging: console.log,
+    plain: false,
+    raw: true,
+    type: QueryTypes.SELECT
+    })
+     .then(data=>{
+      //  console.log(data)
+       let result = data.map(a=>a.tablename)
+       res.status(200).send(result)
+      //  res.render('table.pug', {data:result})
+     })
+     .catch(err=>{
+       console.log(err)
+     })
+})
 
 
 
