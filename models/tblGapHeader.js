@@ -3,92 +3,92 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const gapheader = db.define('tblGapHeader', {
-		lineKey: {
+	LineKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'LineKey'
 		},
-		recKey: {
+		RecKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'RecKey'
 		},
-		dateModified: {
+		DateModified: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'DateModified'
 		},
-		formType: {
+		FormType: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'FormType'
 		},
-		formDate: {
+		FormDate: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'FormDate'
 		},
-		observer: {
+		Observer: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Observer'
 		},
-		recorder: {
+		Recorder: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Recorder'
 		},
-		dataEntry: {
+		DataEntry: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DataEntry'
 		},
-		dataErrorChecking: {
+		DataErrorChecking: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DataErrorChecking'
 		},
-		direction: {
+		Direction: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Direction'
 		},
-		measure: {
+		Measure: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'Measure'
 		},
-		lineLengthAmount: {
+		LineLengthAmount: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'LineLengthAmount'
 		},
-		gapMin: {
+		GapMin: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'GapMin'
 		},
-		gapData: {
+		GapMin: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'GapData'
 		},
-		perennialsCanopy: {
+		PerennialsCanopy: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'PerennialsCanopy'
 		},
-		annualGrassesCanopy: {
+		AnnualGrassesCanopy: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'AnnualGrassesCanopy'
 		},
-		annualForbsCanopy: {
+		AnnualForbsCanopy: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'AnnualForbsCanopy'
 		},
-		otherCanopy: {
+		OtherCanopy: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'OtherCanopy'
@@ -173,53 +173,53 @@ const gapheader = db.define('tblGapHeader', {
 			allowNull: true,
 			field: 'pctBasCat4'
 		},
-		notes: {
+		Notes: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Notes'
 		},
-		noCanopyGaps: {
+		NoCanopyGaps: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'NoCanopyGaps'
 		},
-		noBasalGaps: {
+		NoBasalGaps: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'NoBasalGaps'
 		},
-		perennialsBasal: {
+		PerennialsBasal: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'PerennialsBasal'
 		},
-		annualGrassesBasal: {
+		AnnualGrassesBasal: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'AnnualGrassesBasal'
 		},
-		annualForbsBasal: {
+		AnnualForbsBasal: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'AnnualForbsBasal'
 		},
-		otherBasal: {
+		OtherBasal: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'OtherBasal'
 		},
-		primaryKey: {
+		PrimaryKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			primaryKey:true,
 			field: 'PrimaryKey'
 		},
-		dateLoadedInDb: {
+		DateLoadedInDB: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateLoadedInDB'
 		},
-		dbKey: {
+		DBKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DBKey'

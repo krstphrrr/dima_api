@@ -3,72 +3,59 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const species = db.define('tblSpecies', {
-		speciesCode: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'SpeciesCode'
-		},
-		scientificName: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'ScientificName'
-		},
-		commonName: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'CommonName'
-		},
-		family: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'Family'
-		},
-		sortSeq: {
-			type: Sequelize.INTEGER,
-			allowNull: true,
-			field: 'SortSeq'
-		},
-		synonymOf: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'synonymOf'
-		},
-		growthHabitCode: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'GrowthHabitCode'
-		},
-		duration: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'Duration'
-		},
-		stabilizing: {
-			type: Sequelize.BOOLEAN,
-			allowNull: true,
-			field: 'Stabilizing'
-		},
-		invasive: {
-			type: Sequelize.BOOLEAN,
-			allowNull: true,
-			field: 'Invasive'
-		},
-		group: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'Group'
-		},
-		dateLoadedInDb: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			field: 'DateLoadedInDB'
-		},
-		dbKey: {
-			type: Sequelize.TEXT,
-			allowNull: true,
-			primaryKey:true,
-			field: 'DBKey'
-		}
+	SpeciesCode: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	ScientificName: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	CommonName: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	Family: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	SortSeq: {
+		type: Sequelize.INTEGER,
+		allowNull: true
+	},
+	synonymOf: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	GrowthHabitCode: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	Duration: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	Stabilizing: {
+		type: Sequelize.BOOLEAN,
+		allowNull: true
+	},
+	Invasive: {
+		type: Sequelize.BOOLEAN,
+		allowNull: true
+	},
+	Group: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	DateLoadedInDB: {
+		type: Sequelize.TEXT,
+		allowNull: true
+	},
+	DBKey: {
+		type: Sequelize.TEXT,
+		allowNull: true,
+		primaryKey:true
+	}
 	}, {
 		tableName: 'tblSpecies',
 		createdAt: false,

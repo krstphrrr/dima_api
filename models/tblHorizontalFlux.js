@@ -3,32 +3,32 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const horizontalflux = db.define('tblHorizontalFlux', {
-		boxId: {
+		BoxID: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'BoxID'
 		},
-		stackId: {
+		StackID: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'StackID'
 		},
-		height: {
+		Height: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'Height'
 		},
-		dateEstablished: {
+		DateEstablished: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'DateEstablished'
 		},
-		dateModified: {
+		DateModified: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateModified'
 		},
-		description: {
+		Description: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Description'
@@ -48,7 +48,7 @@ const horizontalflux = db.define('tblHorizontalFlux', {
 			allowNull: true,
 			field: 'ovenTemp'
 		},
-		boxType: {
+		BoxType: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'BoxType'
@@ -58,27 +58,27 @@ const horizontalflux = db.define('tblHorizontalFlux', {
 			allowNull: true,
 			field: 'azimuth'
 		},
-		samplerType: {
+		SamplerType: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SamplerType'
 		},
-		inletArea: {
+		InletArea: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'InletArea'
 		},
-		plotKey: {
+		PlotKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'PlotKey'
 		},
-		location: {
+		Location: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Location'
 		},
-		itemType: {
+		ItemType: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'ItemType'
@@ -88,42 +88,42 @@ const horizontalflux = db.define('tblHorizontalFlux', {
 			allowNull: true,
 			field: 'trapOpeningArea'
 		},
-		gpsCoordSys: {
+		GPSCoordSys: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'GPSCoordSys'
 		},
-		datum: {
+		Datum: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Datum'
 		},
-		zone: {
+		Zone: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Zone'
 		},
-		easting: {
+		Easting: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'Easting'
 		},
-		northing: {
+		Northing: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'Northing'
 		},
-		longitude: {
+		Longitude: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'Longitude'
 		},
-		latitude: {
+		Latitude: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'Latitude'
 		},
-		recKey: {
+		RecKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'RecKey'
@@ -133,7 +133,7 @@ const horizontalflux = db.define('tblHorizontalFlux', {
 			allowNull: true,
 			field: 'collectDate'
 		},
-		collector: {
+		Collector: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Collector'
@@ -178,7 +178,7 @@ const horizontalflux = db.define('tblHorizontalFlux', {
 			allowNull: true,
 			field: 'sedimentArchived'
 		},
-		notes: {
+		Notes: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Notes'
@@ -188,28 +188,28 @@ const horizontalflux = db.define('tblHorizontalFlux', {
 			allowNull: true,
 			field: 'sedimentGperDayByInlet'
 		},
-		seqNo: {
+		SeqNo: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SeqNo'
 		},
-		sampleCompromised: {
+		SampleCompromised: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'SampleCompromised'
 		},
-		primaryKey: {
+		PrimaryKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			primaryKey:true,
 			field: 'PrimaryKey'
 		},
-		dateLoadedInDb: {
+		DateLoadedInDB: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateLoadedInDB'
 		},
-		dbKey: {
+		DBKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DBKey'

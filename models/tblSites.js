@@ -3,48 +3,48 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const sites = db.define('tblSites', {
-		siteKey: {
+		SiteKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			primaryKey:true,
 			field: 'SiteKey'
 		},
-		dateModified: {
+		DateModified: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'DateModified'
 		},
-		siteId: {
+		SiteID: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SiteID'
 		},
-		siteName: {
+		SiteName: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SiteName'
 		},
-		ownership: {
+		Ownership: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Ownership'
 		},
-		contactName: {
+		ContactName: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'ContactName'
 		},
-		mgtObject: {
+		MgtObject: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'MgtObject'
 		},
-		monObject: {
+		MonObject: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'MonObject'
 		},
-		notes: {
+		Notes: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Notes'
@@ -54,7 +54,7 @@ const sites = db.define('tblSites', {
 			allowNull: true,
 			field: 'uploaded'
 		},
-		dateLoadedInDb: {
+		DateLoadedInDB: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateLoadedInDB'

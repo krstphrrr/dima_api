@@ -3,103 +3,103 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const lines = db.define('tblLines', {
-		plotKey: {
+		PlotKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'PlotKey'
 		},
-		lineKey: {
+		LineKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'LineKey'
 		},
-		dateModified: {
+		DateModified: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'DateModified'
 		},
-		lineId: {
+		LineID: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'LineID'
 		},
-		azimuth: {
+		Azimuth: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'Azimuth'
 		},
-		elevationType: {
+		ElevationType: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'ElevationType'
 		},
-		northType: {
+		NorthType: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'NorthType'
 		},
-		northingStart: {
+		NorthingStart: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'NorthingStart'
 		},
-		eastingStart: {
+		EastingStart: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'EastingStart'
 		},
-		elevationStart: {
+		ElevationStart: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'ElevationStart'
 		},
-		northingEnd: {
+		NorthingEnd: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'NorthingEnd'
 		},
-		eastingEnd: {
+		EastingEnd: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'EastingEnd'
 		},
-		elevationEnd: {
+		ElevationEnd: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'ElevationEnd'
 		},
-		latitudeStart: {
+		LatitudeStart: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'LatitudeStart'
 		},
-		longitudeStart: {
+		LongitudeStart: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'LongitudeStart'
 		},
-		latitudeEnd: {
+		LatitudeEnd: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'LatitudeEnd'
 		},
-		longitudeEnd: {
+		LongitudeEnd: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'LongitudeEnd'
 		},
-		primaryKey: {
+		PrimaryKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			primaryKey:true,
 			field: 'PrimaryKey'
 		},
-		dateLoadedInDb: {
+		DateLoadedInDB: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateLoadedInDB'
 		},
-		dbKey: {
+		DBKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DBKey'

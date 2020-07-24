@@ -3,92 +3,92 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const lpiheader = db.define('tblLpiHeader', {
-		lineKey: {
+		LineKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'LineKey'
 		},
-		recKey: {
+		RecKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'RecKey'
 		},
-		dateModified: {
+		DateModified: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'DateModified'
 		},
-		formType: {
+		FormType: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'FormType'
 		},
-		formDate: {
+		FormDate: {
 			type: Sequelize.DATE,
 			allowNull: true,
 			field: 'FormDate'
 		},
-		observer: {
+		Observer: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Observer'
 		},
-		recorder: {
+		Recorder: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Recorder'
 		},
-		dataEntry: {
+		DataEntry: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DataEntry'
 		},
-		dataErrorChecking: {
+		DataErrorChecking: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DataErrorChecking'
 		},
-		direction: {
+		Direction: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Direction'
 		},
-		measure: {
+		Measure: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'Measure'
 		},
-		lineLengthAmount: {
+		LineLengthAmount: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'LineLengthAmount'
 		},
-		spacingIntervalAmount: {
+		SpacingIntervalAmount: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'SpacingIntervalAmount'
 		},
-		spacingType: {
+		SpacingType: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SpacingType'
 		},
-		heightOption: {
+		HeightOption: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightOption'
 		},
-		heightUom: {
+		HeightUOM: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightUOM'
 		},
-		showCheckbox: {
+		ShowCheckbox: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ShowCheckbox'
 		},
-		checkboxLabel: {
+		CheckboxLabel: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'CheckboxLabel'
@@ -138,17 +138,17 @@ const lpiheader = db.define('tblLpiHeader', {
 			allowNull: true,
 			field: 'pctCheckedTopPoints'
 		},
-		layerHeights: {
+		LayerHeights: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'LayerHeights'
 		},
-		woodyHerbHeights: {
+		WoodyHerbHeights: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'WoodyHerbHeights'
 		},
-		lowerHerbHeight: {
+		LowerHerbHeight: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'LowerHerbHeight'
@@ -163,7 +163,7 @@ const lpiheader = db.define('tblLpiHeader', {
 			allowNull: true,
 			field: 'avgHeightTop'
 		},
-		notes: {
+		Notes: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Notes'
@@ -253,7 +253,7 @@ const lpiheader = db.define('tblLpiHeader', {
 			allowNull: true,
 			field: 'pctLitterUnder'
 		},
-		heightNoneOption: {
+		HeightNoneOption: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'HeightNoneOption'
@@ -268,12 +268,12 @@ const lpiheader = db.define('tblLpiHeader', {
 			allowNull: true,
 			field: 'avgHeightHerb'
 		},
-		showShrubShape: {
+		ShowShrubShape: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ShowShrubShape'
 		},
-		rapidMode: {
+		RapidMode: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'RapidMode'
@@ -293,7 +293,7 @@ const lpiheader = db.define('tblLpiHeader', {
 			allowNull: true,
 			field: 'avgHeightLower7'
 		},
-		hafOther: {
+		HAF_Other: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HAF_Other'
@@ -303,18 +303,18 @@ const lpiheader = db.define('tblLpiHeader', {
 			allowNull: true,
 			field: 'avgHeightLowerHerb'
 		},
-		primaryKey: {
+		PrimaryKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			primaryKey: true,
 			field: 'PrimaryKey'
 		},
-		dateLoadedInDb: {
+		DateLoadedInDB: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateLoadedInDB'
 		},
-		dbKey: {
+		DBKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DBKey'

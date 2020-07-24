@@ -17,9 +17,9 @@
     "express": "^4.17.1",
     "helmet": "^3.23.3",
     "nodemon": "^2.0.4",
-    "pg": "^8.2.1",
+    "pg": "^8.3.0",
     "pug": "^3.0.0",
-    "sequelize": "^6.2.0",
+    "sequelize": "^6.3.3",
     "swagger-jsdoc": "^4.0.0",
     "swagger-ui-express": "^4.1.4"
   }

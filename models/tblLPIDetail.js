@@ -3,218 +3,218 @@ const Sequelize = require('sequelize')
 const db = require("../config/database")
 
 const lpidetail = db.define('tblLpiDetail', {
-		recKey: {
+		RecKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'RecKey'
 		},
-		pointLoc: {
+		PointLoc: {
 			type: Sequelize.DOUBLE,
 			allowNull: true,
 			field: 'PointLoc'
 		},
-		pointNbr: {
+		PointNbr: {
 			type: Sequelize.INTEGER,
 			allowNull: true,
 			field: 'PointNbr'
 		},
-		topCanopy: {
+		TopCanopy: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'TopCanopy'
 		},
-		lower1: {
+		Lower1: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower1'
 		},
-		lower2: {
+		Lower2: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower2'
 		},
-		lower3: {
+		Lower3: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower3'
 		},
-		lower4: {
+		Lower4: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower4'
 		},
-		soilSurface: {
+		SoilSurface: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SoilSurface'
 		},
-		heightTop: {
+		HeightTop: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightTop'
 		},
-		chkboxTop: {
+		ChkboxTop: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxTop'
 		},
-		chkboxLower1: {
+		ChkboxLower1: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower1'
 		},
-		chkboxLower2: {
+		ChkboxLower2: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower2'
 		},
-		chkboxLower3: {
+		ChkboxLower3: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower3'
 		},
-		chkboxLower4: {
+		ChkboxLower4: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower4'
 		},
-		chkboxSoil: {
+		ChkboxSoil: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxSoil'
 		},
-		heightLower1: {
+		HeightLower1: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower1'
 		},
-		heightLower2: {
+		HeightLower2: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower2'
 		},
-		heightLower3: {
+		HeightLower3: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower3'
 		},
-		heightLower4: {
+		HeightLower4: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower4'
 		},
-		heightSurface: {
+		HeightSurface: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightSurface'
 		},
-		heightWoody: {
+		HeightWoody: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightWoody'
 		},
-		heightHerbaceous: {
+		HeightHerbaceous: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightHerbaceous'
 		},
-		shrubShape: {
+		ShrubShape: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'ShrubShape'
 		},
-		speciesWoody: {
+		SpeciesWoody: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SpeciesWoody'
 		},
-		speciesHerbaceous: {
+		SpeciesHerbaceous: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SpeciesHerbaceous'
 		},
-		chkboxWoody: {
+		ChkboxWoody: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxWoody'
 		},
-		chkboxHerbaceous: {
+		ChkboxHerbaceous: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxHerbaceous'
 		},
-		lower5: {
+		Lower5: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower5'
 		},
-		lower6: {
+		Lower6: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower6'
 		},
-		lower7: {
+		Lower7: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'Lower7'
 		},
-		chkboxLower5: {
+		ChkboxLower5: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower5'
 		},
-		chkboxLower6: {
+		ChkboxLower6: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower6'
 		},
-		chkboxLower7: {
+		ChkboxLower7: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLower7'
 		},
-		heightLower5: {
+		HeightLower5: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower5'
 		},
-		heightLower6: {
+		HeightLower6: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower6'
 		},
-		heightLower7: {
+		HeightLower7: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLower7'
 		},
-		speciesLowerHerb: {
+		SpeciesLowerHerb: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'SpeciesLowerHerb'
 		},
-		heightLowerHerb: {
+		HeightLowerHerb: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'HeightLowerHerb'
 		},
-		chkboxLowerHerb: {
+		ChkboxLowerHerb: {
 			type: Sequelize.BOOLEAN,
 			allowNull: true,
 			field: 'ChkboxLowerHerb'
 		},
-		primaryKey: {
+		PrimaryKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			primaryKey:true,
 			field: 'PrimaryKey'
 		},
-		dateLoadedInDb: {
+		DateLoadedInDB: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DateLoadedInDB'
 		},
-		dbKey: {
+		DBKey: {
 			type: Sequelize.TEXT,
 			allowNull: true,
 			field: 'DBKey'
