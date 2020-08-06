@@ -39,7 +39,7 @@ const router = express.Router()
  */
 
 // get gapdetails 
-router.get('/gapdetails', gapdetController.getGapDet)
+router.get('/tblGapDetail', gapdetController.getGapDet)
 // router.get('/gapdetails/:primarykey', gapdetController.getGapDetPK)
 
 /**
@@ -69,7 +69,7 @@ router.get('/gapdetails', gapdetController.getGapDet)
 
 
 // get gapheader
-router.get('/gapheader', gapheaderController.getGapHeader)
+router.get('/tblGapHeader', gapheaderController.getGapHeader)
 // router.get('/gapheader/:primarykey', gapheaderController.getGapHeaderPK)
 
 
@@ -101,7 +101,7 @@ router.get('/gapheader', gapheaderController.getGapHeader)
 
 
 // get horizontalflux
-router.get('/horizontalflux', horfluxController.getHorFlux)
+router.get('/tblHorizontalFlux', horfluxController.getHorFlux)
 // router.get('/horizontalflux/:primarykey', horfluxController.getHorFluxPK)
 
 
@@ -132,7 +132,7 @@ router.get('/horizontalflux', horfluxController.getHorFlux)
 
 
 // GET /lines
-router.get('/lines', linesController.getLines)
+router.get('/tblLines', linesController.getLines)
 // router.get('/lines/:primarykey', linesController.getLinesPK)
 
 /**
@@ -162,7 +162,7 @@ router.get('/lines', linesController.getLines)
 
 
 // get lpi details 
-router.get('/lpidetails', lpidetController.getLPIDet)
+router.get('/tblLPIDetail', lpidetController.getLPIDet)
 // router.get('/lpidetails/:primarykey', lpidetController.getLPIDetPK)
 
 /**
@@ -192,7 +192,7 @@ router.get('/lpidetails', lpidetController.getLPIDet)
 
 
 // get lpi header
-router.get('/lpiheader', lpiheaderController.getLPIHeader)
+router.get('/tblLPIHeader', lpiheaderController.getLPIHeader)
 // router.get('/lpiheader/:primarykey', lpiheaderController.getLPIHeaderPK)
 
 /**
@@ -221,7 +221,7 @@ router.get('/lpiheader', lpiheaderController.getLPIHeader)
  */
 
 // get plots
-router.get('/plots', plotsController.getPlots)
+router.get('/tblPlots', plotsController.getPlots)
 // router.get('/plots/:primarykey', plotsController.getPlotsPK)
 
 /**
@@ -251,7 +251,7 @@ router.get('/plots', plotsController.getPlots)
 
 
 // get sites
-router.get('/sites', sitesController.getSites)
+router.get('/tblSites', sitesController.getSites)
 // router.get('/sites/:param', sitesController.getSitesSK)
 
 /**
@@ -278,7 +278,7 @@ router.get('/sites', sitesController.getSites)
 
 
 // get species
-router.get('/species', speciesController.getSpecies)
+router.get('/tblSpecies', speciesController.getSpecies)
 
 /**
  * @swagger 
@@ -303,7 +303,7 @@ router.get('/species', speciesController.getSpecies)
 
 
 // get speciesgeneric 
-router.get('/speciesgeneric', speciesGenController.getSpecGen)
+router.get('/tblSpeciesGeneric', speciesGenController.getSpecGen)
 
 
 module.exports = router
