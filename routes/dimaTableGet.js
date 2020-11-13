@@ -15,7 +15,7 @@ const router = express.Router()
 
 /**
  * @swagger 
- * /api/gapdetails:
+ * /api/gapdetail:
  *  get:
  *    tags:
  *      - GapDetail
@@ -36,6 +36,10 @@ const router = express.Router()
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblGapDetail"
  */
 
 // get gapdetails 
@@ -51,8 +55,6 @@ router.get('/tblGapDetail', gapdetController.getGapDet)
  *    name: GapHeader
  *    produces:
  *      - application/json
- *    consumes:
- *      - application/json
  *    parameters:
  *      - in : query
  *        name: PrimaryKey
@@ -65,6 +67,10 @@ router.get('/tblGapDetail', gapdetController.getGapDet)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblGapHeader"
  */
 
 
@@ -96,6 +102,10 @@ router.get('/tblGapHeader', gapheaderController.getGapHeader)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblHorizontalFlux"
  */
 
 
@@ -128,6 +138,10 @@ router.get('/tblHorizontalFlux', horfluxController.getHorFlux)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblLines"
  */
 
 
@@ -137,11 +151,11 @@ router.get('/tblLines', linesController.getLines)
 
 /**
  * @swagger 
- * /api/lpidetails:
+ * /api/lpidetail:
  *  get:
  *    tags:
- *      - LPI Details
- *    name: LPI Details
+ *      - LPI Detail
+ *    name: LPI Detail
  *    produces:
  *      - application/json
  *    consumes:
@@ -158,6 +172,10 @@ router.get('/tblLines', linesController.getLines)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblLPIDetail"
  */
 
 
@@ -188,6 +206,10 @@ router.get('/tblLPIDetail', lpidetController.getLPIDet)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblLPIHeader"
  */
 
 
@@ -218,6 +240,10 @@ router.get('/tblLPIHeader', lpiheaderController.getLPIHeader)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblPlots"
  */
 
 // get plots
@@ -247,6 +273,10 @@ router.get('/tblPlots', plotsController.getPlots)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblSites"
  */
 
 
@@ -273,6 +303,10 @@ router.get('/tblSites', sitesController.getSites)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblSpecies"
  */
 
 
@@ -299,6 +333,118 @@ router.get('/tblSpecies', speciesController.getSpecies)
  *    responses:
  *      '200':
  *        description: A successful response.
+ *        schema:
+ *          type: "array"
+ *          items:
+ *            $ref: "#/definitions/tblSpeciesGeneric"
+ *definitions:
+ *    tblGapDetail:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *          maxLength: 50
+ *        SeqNo:
+ *          type: "integer"
+ *          format: int32
+ *        RecType:
+ *          type: "string"
+ *          maxLength: 1
+ *          Possible values:
+ *            - "C"
+ *            - "B"
+ *        GapStart:
+ *          type: "number"
+ *          maxLength: 50
+ *        GapEnd:
+ *          type: "number"
+ *          maxLength: 50
+ *        Gap:
+ *          type: "number"
+ *          maxLength: 50
+ *        PrimaryKey:
+ *          type: "number"
+ *          maxLength: 50
+ *        DateLoadedInDB:
+ *          type: "string"
+ *          format: "date"
+ *        DBKey:
+ *          type: "string"
+ *          maxLength: 50
+ *    tblGapHeader:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *          maxLength: 50
+ *        SeqNo:
+ *          type: "integer"
+ *          format: int32
+ *        RecType:
+ *          type: "string"
+ *          maxLength: 1
+ *          Possible values:
+ *            - "C"
+ *            - "B"
+ *        GapStart:
+ *          type: "number"
+ *          maxLength: 50
+ *        GapEnd:
+ *          type: "number"
+ *          maxLength: 50
+ *        Gap:
+ *          type: "number"
+ *          maxLength: 50
+ *        PrimaryKey:
+ *          type: "number"
+ *          maxLength: 50
+ *        DateLoadedInDB:
+ *          type: "string"
+ *          format: "date"
+ *        DBKey:
+ *          type: "string"
+ *          maxLength: 50
+ *    tblHorizontalFlux:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblLines:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblLPIDetail:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblLPIHeader:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblPlots:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblSites:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblSpecies:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ *    tblSpeciesGeneric:
+ *      type: "object"
+ *      properties:
+ *        RecKey:
+ *          type: "string"
+ * 
  */
 
 
