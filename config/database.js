@@ -7,7 +7,7 @@ module.exports = new Sequelize(process.env.DIMA, {
     operatorsAliases: 0,
 
     pool: {
-        max: 5,
+        max: 10,
         min: 0,
         acquire: 30000,
         idle: 10000

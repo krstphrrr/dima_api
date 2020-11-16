@@ -374,29 +374,227 @@ router.get('/tblSpecies', speciesController.getSpecies)
  *    tblGapHeader:
  *      type: "object"
  *      properties:
+ *        LineKey:
+ *          type: "string"
+ *          maxLength: 20
  *        RecKey:
  *          type: "string"
  *          maxLength: 50
- *        SeqNo:
+ *        DateModified:
+ *          type: "string"
+ *          format: "date-time"
+ *        FormType:
+ *          type: "string"
+ *          maxLength: 5
+ *        FormDate:
+ *          type: "string"
+ *          format: "date-time"
+ *        Observer:
+ *          type: "string"
+ *          maxLength: 50
+ *        Recorder:
+ *          type: "string"
+ *          maxLength: 50
+ *        DataEntry:
+ *          type: "string"
+ *          maxLength: 50
+ *        DataErrorChecking:
+ *          type: "string"
+ *          maxLength: 50
+ *        Direction:
+ *          type: "string"
+ *          maxLength: 50
+ *        Measure:
+ *          type: "string"
+ *          format: "byte"
+ *        LineLengthAmount:
  *          type: "integer"
- *          format: int32
- *        RecType:
+ *          format: "int32"
+ *        GapMin:
+ *          type: "number"
+ *        GapData:
+ *          type: "string"
+ *          maxLength: 5
+ *        PerennialsCanopy:
+ *          type: "integer"
+ *          format: "int32"
+ *        AnnualGrassesCanopy:
+ *          type: "integer"
+ *          format: "int32"
+ *        AnnualForbsCanopy:
+ *          type: "integer"
+ *          format: "int32"
+ *        OtherCanopy:
+ *          type: "integer"
+ *          format: "int32"
+ *        sumCanCat1:
+ *          type: "number"
+ *        sumCanCat2:
+ *          type: "number"
+ *        sumCanCat3:
+ *          type: "number"
+ *        sumCanCat4:
+ *          type: "number"
+ *        pctCanCat1:
+ *          type: "number"
+ *        pctCanCat2:
+ *          type: "number"
+ *        pctCanCat3:
+ *          type: "number"
+ *        pctCanCat4:
+ *          type: "number"
+ *        sumBasCat1:
+ *          type: "number"
+ *        sumBasCat2:
+ *          type: "number"
+ *        sumBasCat3:
+ *          type: "number"
+ *        sumBasCat4:
+ *          type: "number"
+ *        pctBasCat1:
+ *          type: "number"
+ *        pctBasCat2:
+ *          type: "number"
+ *        pctBasCat3:
+ *          type: "number"
+ *        pctBasCat4:
+ *          type: "number"
+ *        Notes:
+ *          type: "string"
+ *          maxLength: 250
+ *        NoCanopyGap:
+ *          type: "integer"
+ *          format: "int32"
+ *        NoBasalGap:
+ *          type: "integer"
+ *          format: "int32"
+ *        PerennialsBasal:
+ *          type: "integer"
+ *          format: "int32"
+ *        AnnualGrassesBasal:
+ *          type: "integer"
+ *          format: "int32"
+ *        AnnualForbsBasal:
+ *          type: "integer"
+ *          format: "int32"
+ *        OtherBasal:
+ *          type: "integer"
+ *          format: "int32"
+ *        PrimaryKey:
+ *          type: "string"
+ *        DateLoadedInDB:
+ *          type: "string"
+ *          format: "date-time"
+ *        DBKey:
+ *          type: "string"
+ * 
+ *    tblHorizontalFlux:
+ *      type: "object"
+ *      properties:
+ *        BoxID:
+ *          type: "string"
+ *          maxLength: 50
+ *        StackID:
+ *          type: "string"
+ *          maxLength: 50
+ *        Height:
+ *          type: "number"
+ *        DateEstablished:
+ *          type: "string"
+ *          format: "date"
+ *        DateModified:
+ *          type: "string"
+ *          format: "date-time"
+ *        Description:
+ *          type: "string"
+ *          maxLength: 50
+ *        openingSize:
+ *          type: "string"
+ *          maxLength: 20
+ *        ovenTemp:
+ *          type: "integer"
+ *        BoxType:
+ *          type: "integer"
+ *        azimuth:
+ *          type: "string"
+ *          maxLength: 255
+ *        SamplerType:
+ *          type: "string"
+ *          maxLength: 25
+ *        InletArea:
+ *          type: "number"
+ *        PlotKey:
+ *          type: "string"
+ *          maxLength: 50
+ *        Location:
+ *          type: "string"
+ *          maxLength: 100
+ *        ItemType:
  *          type: "string"
  *          maxLength: 1
- *          Possible values:
- *            - "C"
- *            - "B"
- *        GapStart:
+ *        trapOpeningArea:
  *          type: "number"
+ *        GPSCoordSys:
+ *          type: "string"
  *          maxLength: 50
- *        GapEnd:
+ *        Datum:
+ *          type: "string"
+ *          maxLength: 50
+ *        Zone:
+ *          type: "string"
+ *          maxLength: 50
+ *        Easting:
+ *          type: "string"
+ *          maxLength: 50
+ *        Northing:
+ *          type: "string"
+ *          maxLength: 50
+ *        Longitude:
+ *          type: "string"
+ *          maxLength: 50
+ *        Latitude:
+ *          type: "string"
+ *          maxLength: 50
+ *        RecKey:
+ *          type: "string"
+ *          maxLength: 255
+ *        collectDate:
+ *          type: "string"
+ *          format: "date"
+ *        Collector:
+ *          type: "string"
+ *          maxLength: 30
+ *        labTech:
+ *          type: "string"
+ *          maxLength: 30
+ *        beakerNbr:
+ *          type: "string"
+ *          maxLength: 20
+ *        emptyWeight:
  *          type: "number"
- *          maxLength: 50
- *        Gap:
+ *        recordedWeight:
  *          type: "number"
- *          maxLength: 50
+ *        sedimentWeight:
+ *          type: "number"
+ *          maxLength: 1
+ *        daysExposed:
+ *          type: "integer"
+ *          format: "int32"
+ *        sedimentGperDay:
+ *          type: "number"
+ *        sedimentArchived:
+ *          type: "string"
+ *        Notes:
+ *          type: "string"
+ *        sedimentGperDayByInlet:
+ *          type: "number"
+ *        SeqNo:
+ *          type: "integer"
+ *          maxLength: "int32"
+ *        SampleCompromised:
+ *          type: "string"
  *        PrimaryKey:
- *          type: "number"
+ *          type: "string"
  *          maxLength: 50
  *        DateLoadedInDB:
  *          type: "string"
@@ -404,16 +602,60 @@ router.get('/tblSpecies', speciesController.getSpecies)
  *        DBKey:
  *          type: "string"
  *          maxLength: 50
- *    tblHorizontalFlux:
- *      type: "object"
- *      properties:
- *        RecKey:
- *          type: "string"
+ * 
  *    tblLines:
  *      type: "object"
  *      properties:
- *        RecKey:
+ *        PlotKey:
  *          type: "string"
+ *          maxLength: 20
+ *        LineKey:
+ *          type: "string"
+ *          maxLength: 20
+ *        DateModified:
+ *          type: "string"
+ *          format: "date"
+ *        LineID:
+ *          type: "string"
+ *          maxLength: 15
+ *        Azimuth:
+ *          type: "integer"
+ *          format: "int32"
+ *        ElevationType:
+ *          type: "string"
+ *        NorthType:
+ *          type: "integer"
+ *          format: "int32"
+ *        NorthingStart:
+ *          type: "number"
+ *        EastingStart:
+ *          type: "number"
+ *        ElevationStart:
+ *          type: "number"
+ *        NorthingEnd:
+ *          type: "number"
+ *        EastingEnd:
+ *          type: "number"
+ *        ElevationEnd:
+ *          type: "number"
+ *        LatitudeStart:
+ *          type: "number"
+ *        LongitudeStart:
+ *          type: "number"
+ *        LatitudeEnd:
+ *          type: "number"
+ *        LongitudeEnd:
+ *          type: "number"
+ *        PrimaryKey:
+ *          type: "string"
+ *          maxLength: 50
+ *        DateLoadedInDB:
+ *          type: "string"
+ *          format: "date"
+ *        DBKey:
+ *          type: "string"
+ *          maxLength: 50
+ * 
  *    tblLPIDetail:
  *      type: "object"
  *      properties:
