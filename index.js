@@ -13,7 +13,7 @@ const path = require('path')
 
 //route
 const dimaRoute = require('./routes/dimaTableGet');
-// const { reset } = require('nodemon');
+
 const bodyparser = require('body-parser');
 
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -57,7 +57,7 @@ db.authenticate()
 
 
 app.get('/', (req, res) => {
-  res.send('dima api up. updated: 03-22-2021')
+  res.send('dima api up. updated: 03-22-2021 ')
   })
 
 app.get('/tables', (req, res)=>{
