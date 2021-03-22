@@ -57,7 +57,7 @@ db.authenticate()
 
 
 app.get('/', (req, res) => {
-  res.send('dima api up. updated: 03-22-2021 ')
+  res.send('dima api up. updated: 03-22-2021 00:00')
   })
 
 app.get('/tables', (req, res)=>{
