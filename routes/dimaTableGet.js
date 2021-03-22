@@ -44,6 +44,7 @@ const router = express.Router()
 
 // get gapdetails 
 router.get('/tblGapDetail', gapdetController.getGapDet)
+
 // router.get('/gapdetails/:primarykey', gapdetController.getGapDetPK)
 
 /**
