@@ -41,3 +41,4 @@ jobs:
           script: |
             docker service update api_services_dima_api \
             --image=docker.io/krstphr/dima_api:latest \
+            --update-delay 30s
