@@ -7,8 +7,8 @@ const app = express()
 const db = require('./config/database')
 const cors = require('cors')
 const helmet = require('helmet')
-const swaggerJsDoc = require('swagger-jsdoc')
-const swaggerUi = require('swagger-ui-express')
+// const swaggerJsDoc = require('swagger-jsdoc')
+// const swaggerUi = require('swagger-ui-express')
 const path = require('path')
 
 //route
@@ -18,33 +18,33 @@ const bodyparser = require('body-parser');
 
 app.use(bodyparser.urlencoded({ extended: true }));
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view-engine', 'pug')
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view-engine', 'pug')
 
 
-const swaggerOptions = {
-  swaggerDefinition: {
-    info:{
-      title: 'Dima API',
-      description: 'API to serve to dima data',
-      contact:{
-        name:'kris'
-      },
-      servers:["http://localhost:5005/api/", "https://dima.landscapedatacommons.org/api/"]
-    }
-  },
-  apis:["./routes/*.js"]
-}
+// const swaggerOptions = {
+//   swaggerDefinition: {
+//     info:{
+//       title: 'Dima API',
+//       description: 'API to serve to dima data',
+//       contact:{
+//         name:'kris'
+//       },
+//       servers:["http://localhost:5005/api/", "https://dima.landscapedatacommons.org/api/"]
+//     }
+//   },
+//   apis:["./routes/*.js"]
+// }
 
-var swaggerUiOpts = {
-  explorer: false,
-  swaggerOptions: swaggerOptions,
-  customCss: '.swagger-ui .topbar { display: none }'
-}
+// var swaggerUiOpts = {
+//   explorer: false,
+//   swaggerOptions: swaggerOptions,
+//   customCss: '.swagger-ui .topbar { display: none }'
+// }
 
 
-const swaggerDocs = swaggerJsDoc(swaggerOptions)
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, swaggerUiOpts))
+// const swaggerDocs = swaggerJsDoc(swaggerOptions)
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs, swaggerUiOpts))
 
 app.use(helmet())
 app.use(cors())
